@@ -23,3 +23,18 @@ Product.transaction do
     Product.create!(name: product)
   end
 end
+
+User.transaction do
+  User.create!(
+    email: 'john@gmail.com',
+    password: 'topsecret',
+    password_confirmation: 'topsecret'
+  )
+end
+
+Inventory.transaction do
+  Inventory.create!(price: 3,
+                    section: 1,
+                    user: User.first,
+                    product: Product.all.sample)
+end

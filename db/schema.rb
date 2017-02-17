@@ -24,10 +24,14 @@ ActiveRecord::Schema.define(version: 20170217162649) do
   end
 
   create_table "inventories", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "product_id", null: false
     t.integer  "price",      null: false
     t.string   "section",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_inventories_on_product_id", using: :btree
+    t.index ["user_id"], name: "index_inventories_on_user_id", using: :btree
   end
 
   create_table "products", force: :cascade do |t|
@@ -48,4 +52,6 @@ ActiveRecord::Schema.define(version: 20170217162649) do
   end
 
   add_foreign_key "examples", "users"
+  add_foreign_key "inventories", "products"
+  add_foreign_key "inventories", "users"
 end
