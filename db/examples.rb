@@ -17,3 +17,9 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
+Product.transaction do
+  %w(apple pear banana orange cheese milk).each do |product|
+    next if User.exists?
+    Product.create!(name: product)
+  end
+end
