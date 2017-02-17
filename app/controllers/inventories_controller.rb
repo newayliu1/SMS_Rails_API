@@ -28,7 +28,7 @@ class InventoriesController < ApplicationController
   # PATCH/PUT /inventories/1
   def update
     if @inventory.update(inventory_params)
-      render json: @inventory
+      head :no_content
     else
       render json: @inventory.errors, status: :unprocessable_entity
     end
