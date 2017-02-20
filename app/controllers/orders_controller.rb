@@ -16,7 +16,7 @@ class OrdersController < ProtectedController
 
   # POST /orders
   def create
-    @order = current_user.orders.build(inventory_params)
+    @order = current_user.orders.build(order_params)
 
     if @order.save
       render json: @order, status: :created
@@ -48,6 +48,8 @@ class OrdersController < ProtectedController
 
   # Only allow a trusted parameter "white list" through.
   def order_params
-    params.require(:order).permit(:expiration_date, :amount, :order_date)
+    params.require(:order).permit(:expiration_date,
+                                  :amount, :order_date,
+                                  :user_id, :product_id)
   end
 end

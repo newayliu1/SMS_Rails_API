@@ -38,3 +38,11 @@ Inventory.transaction do
                     user: User.first,
                     product: Product.all.sample)
 end
+
+Order.transaction do
+  Order.create!(expiration_date: '2017-1-1',
+                amount: 3,
+                order_date: '2016-12-15',
+                user: User.first,
+                product: Product.all.sample)
+end
