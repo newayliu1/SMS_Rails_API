@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
+  resources :orders, except: [:new, :edit]
   resources :inventories, except: [:new, :edit]
   resources :products, only: [:index, :show, :create]
   resources :examples, except: [:new, :edit]

@@ -2,4 +2,5 @@
 class User < ApplicationRecord
   include Authentication
   has_many :inventories
+  has_many :orders
 end

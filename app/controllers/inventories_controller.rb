@@ -4,7 +4,7 @@ class InventoriesController < ProtectedController
 
   # GET /inventories
   def index
-    @inventories = Inventory.all
+    @inventories = current_user.inventories.all
 
     render json: @inventories
   end
