@@ -5,4 +5,8 @@ class ProductSerializer < ActiveModel::Serializer
   def inventories
     object.inventories.where(user: current_user)
   end
+
+  def orders
+    object.orders.where(user: current_user)
+  end
 end
