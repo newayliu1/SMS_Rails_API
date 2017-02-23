@@ -4,10 +4,13 @@
 # A Supermarket Database API to manage market data
 
 ## Front End repo
-(https://github.com/newayliu1/Supermarket-Management-System)
+[Front End Repo](https://github.com/newayliu1/Supermarket-Management-System)
+
+## Heroku Deploy Link
+[Link](https://wei-supermarket.herokuapp.com/)
 
 ## ERD
-[ERD](http://imgur.com/ZEWk8Oz)
+![ERD](http://imgur.com/ZEWk8Oz)
 
 ## API
 
