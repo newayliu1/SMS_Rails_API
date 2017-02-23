@@ -10,7 +10,7 @@
 [Link](https://wei-supermarket.herokuapp.com/)
 
 ## ERD
-![ERD](http://imgur.com/ZEWk8Oz)
+[ERD](http://imgur.com/ZEWk8Oz)
 
 ## API
 
