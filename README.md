@@ -14,13 +14,39 @@
 
 ## API
 
-Use this as the basis for your own API documentation. Add a new third-level
-heading for your custom entities, and follow the pattern provided for the
-built-in user authentication documentation.
+Use this API to store supermarket inventory data. Users must to sign in first to interact with API. All data returned from API actions is formatted as JSON and only belongs to the requested user.
 
-Scripts are included in [`scripts`](scripts) to test built-in actions. Add your
-own scripts to test your custom API. As an alternative, you can write automated
-tests in RSpec to test your API.
+Scripts are included in [`scripts`](scripts) to test built-in actions.
+
+### Inventory
+
+| Verb   | URI Pattern        | Controller#Action    |
+|--------|--------------------|----------------------|
+| GET    | `/inventories`     | `inventories#index`  |
+| GET    | `/inventories/:id` | `inventories#show`   |
+| POST   | `/inventories`     | `inventories#create` |
+| PATCH  | `/inventories`     | `inventories#update` |
+| DELETE | `/inventories`     | `inventories#destroy`|
+
+### Order
+
+| Verb   | URI Pattern   | Controller#Action |
+|--------|---------------|-------------------|
+| GET    | `/orders`     | `orders#index`    |
+| GET    | `/orders/:id` | `orders#show`     |
+| POST   | `/orders`     | `orders#create`   |
+| PATCH  | `/orders`     | `orders#update`   |
+| DELETE | `/orders`     | `orders#destroy`  |
+
+### Product
+
+In main entity table, products, the elements are not able to be deleted, and updated.
+
+| Verb   | URI Pattern     | Controller#Action |
+|--------|-----------------|-------------------|
+| GET    | `/products`     | `products#index`  |
+| GET    | `/products/:id` | `products#show`   |
+| POST   | `/products`     | `products#create` |
 
 ### Authentication
 
@@ -218,10 +244,3 @@ Content-Type: application/json; charset=utf-8
   }
 }
 ```
-
-
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
