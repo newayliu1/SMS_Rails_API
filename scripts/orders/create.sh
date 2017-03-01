@@ -12,8 +12,7 @@ curl "${API}${URL_PATH}" \
       "expiration_date":"'"${EXPIRATION_DATE}"'",
       "amount":"'"${AMOUNT}"'",
       "order_date": "'"${ORDER_DATE}"'",
-      "product_id": "'"${PRODUCT_ID}"'",
-      "user_id": "'"${USER_ID}"'"
+      "product_id": "'"${PRODUCT_ID}"'"
     }
 
   }'

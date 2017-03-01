@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 class ProductsController < ProtectedController
-  before_action :set_product, only: [:show, :update, :destroy]
+  before_action :set_product, only: [:show]
 
   # GET /products
   def index
@@ -26,18 +26,18 @@ class ProductsController < ProtectedController
   end
 
   # PATCH/PUT /products/1
-  def update
-    if @product.update(product_params)
-      head :no_content
-    else
-      render json: @product.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @product.update(product_params)
+  #     head :no_content
+  #   else
+  #     render json: @product.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /products/1
-  def destroy
-    @product.destroy
-  end
+  # def destroy
+  #   @product.destroy
+  # end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_product

@@ -50,6 +50,6 @@ class OrdersController < ProtectedController
   def order_params
     params.require(:order).permit(:expiration_date,
                                   :amount, :order_date,
-                                  :user_id, :product_id)
+                                  :product_id)
   end
 end

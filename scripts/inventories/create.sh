@@ -11,8 +11,7 @@ curl "${API}${URL_PATH}" \
     "inventory":{
       "price":"'"${PRICE}"'",
       "section":"'"${SECTION}"'",
-      "product_id": "'"${PRODUCT_ID}"'",
-      "user_id": "'"${USER_ID}"'"
+      "product_id": "'"${PRODUCT_ID}"'"
     }
 
   }'

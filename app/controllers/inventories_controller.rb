@@ -47,7 +47,7 @@ class InventoriesController < ProtectedController
 
   # Only allow a trusted parameter "white list" through.
   def inventory_params
-    params.require(:inventory).permit(:product_id, :user_id, :price, :section)
+    params.require(:inventory).permit(:product_id, :price, :section)
   end
   private :inventory_params
 end
