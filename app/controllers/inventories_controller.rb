@@ -28,7 +28,7 @@ class InventoriesController < ProtectedController
   # PATCH/PUT /inventories/1
   def update
     if @inventory.update(inventory_params)
-      head :no_content
+      render json: @inventory
     else
       render json: @inventory.errors, status: :unprocessable_entity
     end
