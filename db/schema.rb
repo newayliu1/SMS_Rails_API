@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170220214805) do
+ActiveRecord::Schema.define(version: 20170303163121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,12 +24,12 @@ ActiveRecord::Schema.define(version: 20170220214805) do
   end
 
   create_table "inventories", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.integer  "product_id", null: false
-    t.integer  "price",      null: false
-    t.string   "section",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id",                            null: false
+    t.integer  "product_id",                         null: false
+    t.decimal  "price",      precision: 5, scale: 2, null: false
+    t.string   "section",                            null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.index ["product_id"], name: "index_inventories_on_product_id", using: :btree
     t.index ["user_id"], name: "index_inventories_on_user_id", using: :btree
   end
