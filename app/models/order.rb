@@ -5,4 +5,5 @@ class Order < ApplicationRecord
   validates :expiration_date, presence: true
   validates :amount, presence: true
   validates :order_date, presence: true
+  validates :amount, numericality: true
 end
